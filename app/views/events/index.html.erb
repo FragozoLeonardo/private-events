@@ -1,0 +1,6 @@
+<h1>Upcoming Events</h1>
+<ul>
+  <% @events.each do |event| %>
+    <li><%= event.name %> at <%= event.location %> on <%= event.date %></li>
+  <% end %>
+</ul>

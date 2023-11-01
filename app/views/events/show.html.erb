@@ -1,0 +1,10 @@
+<h1><%= @event.name %></h1>
+<p>Data: <%= @event.date %></p>
+<p>Local: <%= @event.location %></p>
+
+<%= link_to 'Editar', edit_event_path(@event) %>
+<%= link_to "Excluir", event_path(@event), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Você realmente quer excluir esse evento?"
+                  } %></li>
+<%= link_to 'Voltar', events_path %>

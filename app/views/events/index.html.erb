@@ -1,6 +1,11 @@
-<h1>Upcoming Events</h1>
+<h1>Eventos</h1>
+
 <ul>
   <% @events.each do |event| %>
-    <li><%= event.name %> at <%= event.location %> on <%= event.date %></li>
+    <li>
+      <%= link_to event.name, event %>
+    </li>
   <% end %>
 </ul>
+
+<%= link_to 'Novo Evento', new_event_path %>
